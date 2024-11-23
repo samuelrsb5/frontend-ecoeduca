@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-mapa-eco',
-  templateUrl: './mapa-eco.component.html',
-  styleUrl: './mapa-eco.component.css'
+    selector: 'app-mapa-eco',
+    templateUrl: './mapa-eco.component.html',
+    styleUrl: './mapa-eco.component.css',
+    standalone: false
 })
 export class MapaEcoComponent {
 

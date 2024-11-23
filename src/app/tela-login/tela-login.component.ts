@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-tela-login',
-  templateUrl: './tela-login.component.html',
-  styleUrls: ['./tela-login.component.css']
+    selector: 'app-tela-login',
+    templateUrl: './tela-login.component.html',
+    styleUrls: ['./tela-login.component.css'],
+    standalone: false
 })
 export class TelaLoginComponent {
   // Objeto user que conterá os dados do formulário

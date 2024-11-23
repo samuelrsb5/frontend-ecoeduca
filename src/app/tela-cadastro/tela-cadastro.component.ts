@@ -3,9 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-tela-cadastro',
-  templateUrl: './tela-cadastro.component.html',
-  styleUrls: ['./tela-cadastro.component.css']
+    selector: 'app-tela-cadastro',
+    templateUrl: './tela-cadastro.component.html',
+    styleUrls: ['./tela-cadastro.component.css'],
+    standalone: false
 })
 export class TelaCadastroComponent {
 
