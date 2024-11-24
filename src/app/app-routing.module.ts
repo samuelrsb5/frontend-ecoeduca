@@ -7,6 +7,7 @@ import { MapaEcoComponent } from './mapa-eco/mapa-eco.component';
 import { ReciclagemEcoComponent } from './reciclagem-eco/reciclagem-eco.component';
 import { DesafiosEcoComponent } from './desafios-eco/desafios-eco.component';
 import {TelaCadastroComponent} from './tela-cadastro/tela-cadastro.component';
+import { SegundaAtividadeComponent } from './segunda-atividade/segunda-atividade.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent}, // Rota inicial (cadastro)
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'histórias', component: HistoriasEcoComponent},
   { path: 'mapa', component: MapaEcoComponent},
   { path: 'reciclagem', component: ReciclagemEcoComponent },
-  { path: 'desafios', component: DesafiosEcoComponent }
+  { path: 'desafios', component: DesafiosEcoComponent },
+  { path: 'segunda-atividade', component: SegundaAtividadeComponent }
 
 ];
 

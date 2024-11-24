@@ -1,0 +1,18 @@
+<div class="activity">
+  <h2>Classifique os Resíduos!</h2>
+  <p>Arraste os itens para o tipo de resíduo correto.</p>
+
+  <div class="materials">
+    <div class="material" draggable="true" (dragstart)="startDrag('plastic')">Garrafa Plástica</div>
+    <div class="material" draggable="true" (dragstart)="startDrag('organic')">Casca de Banana</div>
+    <div class="material" draggable="true" (dragstart)="startDrag('paper')">Revista</div>
+  </div>
+
+  <div class="bins">
+    <div class="bin" (drop)="onDrop('plastic')" (dragover)="allowDrop($event)">Plástico</div>
+    <div class="bin" (drop)="onDrop('organic')" (dragover)="allowDrop($event)">Orgânico</div>
+    <div class="bin" (drop)="onDrop('paper')" (dragover)="allowDrop($event)">Papel</div>
+  </div>
+
+  <p class="feedback" *ngIf="feedback">{{ feedback }}</p>
+</div>

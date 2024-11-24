@@ -1,5 +1,29 @@
-<div class="reciclagem">
-    <h1>Reciclagem do Lixo</h1>
-    <p>Aqui você encontra as melhores maneiras e prevenções adquadas sobre o descarte correto dos lixos!</p>
-    <button routerLink="/home">Voltar para Home</button>
+<div class="instruction">
+  <h2>Instrução</h2>
+  <p>Garrafas de vidro e pedaços de vidro devem ser descartados na lixeira verde.</p>
+</div>
+
+<div class="quiz">
+  <h2>Quiz: Onde descartar este material?</h2>
+  <img src="" alt="Imagem do material" class="material-image" />
+  <div class="bins">
+    <div class="bin" (click)="checkAnswer('green')">
+      <img src="" alt="Lixeira verde" class="bin-image dashed" />
+      <p>Verde</p>
+    </div>
+    <div class="bin" (click)="checkAnswer('blue')">
+      <img src="" alt="Lixeira azul" class="bin-image dashed" />
+      <p>Azul</p>
+    </div>
+    <div class="bin" (click)="checkAnswer('yellow')">
+      <img src="" alt="Lixeira amarela" class="bin-image dashed" />
+      <p>Amarela</p>
+    </div>
+    <div class="bin" (click)="checkAnswer('red')">
+      <img src="" alt="Lixeira vermelha" class="bin-image dashed" />
+      <p>Vermelha</p>
+    </div>
   </div>
+  <p class="feedback" *ngIf="feedback">{{ feedback }}</p>
+  <button *ngIf="feedback" class="next-button" routerLink="/segunda-atividade">Próxima Atividade</button>
+</div>

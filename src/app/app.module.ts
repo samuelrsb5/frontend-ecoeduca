@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { HistoriasEcoComponent } from './historias-eco/historias-eco.component';
 import { MapaEcoComponent } from './mapa-eco/mapa-eco.component';
 import { ReciclagemEcoComponent } from './reciclagem-eco/reciclagem-eco.component';
 import { DesafiosEcoComponent } from './desafios-eco/desafios-eco.component';
 import { TelaCadastroComponent } from './tela-cadastro/tela-cadastro.component';
-import {ConfiguracoesComponent} from './configuracoes/configuracoes.component';
+import { ConfiguracoesComponent } from './configuracoes/configuracoes.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { SegundaAtividadeComponent } from './segunda-atividade/segunda-atividade.component';
 
 
 
@@ -26,11 +28,12 @@ import {ConfiguracoesComponent} from './configuracoes/configuracoes.component';
     TelaLoginComponent,
     HomePageComponent,
     HistoriasEcoComponent,
-    MapaEcoComponent,
     ReciclagemEcoComponent,
     DesafiosEcoComponent,
     TelaCadastroComponent,
-    ConfiguracoesComponent
+    ConfiguracoesComponent,
+    MapaEcoComponent,
+    SegundaAtividadeComponent
    
     
     
@@ -40,7 +43,8 @@ import {ConfiguracoesComponent} from './configuracoes/configuracoes.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    GoogleMapsModule
   ],
   providers: [
     provideAnimationsAsync()

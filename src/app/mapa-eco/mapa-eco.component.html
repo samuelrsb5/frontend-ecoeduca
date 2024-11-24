@@ -2,4 +2,11 @@
     <h1>Mapa de Coleta</h1>
     <p>Aqui você encontra os pontos de coleta seletiva próximos a você!</p>
     <button routerLink="/home">Voltar para Home</button>
+    <google-map [center]="center" [zoom]="zoom" style="height: 500px; width: 100%;">
+      <map-marker *ngFor="let marker of markers" 
+                  [position]="marker.position" 
+                  [title]="marker.title">
+      </map-marker>
+    </google-map>
   </div>
+  

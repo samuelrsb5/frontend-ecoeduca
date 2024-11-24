@@ -1,0 +1,132 @@
+/* Estilo geral da página de instrução */
+.activity {
+  background-color: #81d4fa; /* Cor de fundo azul claro */
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Título da atividade */
+.activity h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff; /* Cor branca */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Texto da instrução */
+.activity p {
+  font-size: 1.2rem;
+  color: #ffffff; /* Cor branca */
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Container de materiais */
+.materials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Estilo dos materiais */
+.material {
+  padding: 15px 30px;
+  background-color: #ffffff;
+  border: 2px dashed #ff4081; /* Cor das bordas rosa */
+  border-radius: 12px;
+  cursor: grab;
+  user-select: none;
+  margin: 10px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #000000; /* Texto preto */
+  transition: all 0.3s ease;
+}
+
+.material:hover {
+  background-color: #ff4081; /* Mudança de cor ao passar o mouse */
+  color: white;
+}
+
+/* Container de lixeiras */
+.bins {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Estilo das lixeiras */
+.bin {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  border-radius: 12px;
+  background-color: #ffffff; /* Fundo branco das lixeiras */
+  cursor: pointer;
+  border: 2px dashed #3f51b5; /* Borda roxa */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  color: #000000; /* Cor do texto das lixeiras */
+}
+
+.bin:hover {
+  background-color: #3f51b5; /* Cor da lixeira ao passar o mouse */
+  color: #ffffff;
+  transform: scale(1.1); /* Efeito de aumentar a lixeira ao passar o mouse */
+}
+
+/* Feedback */
+.feedback {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #388e3c; /* Verde para resposta correta */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo de texto para quando não houver feedback */
+.feedback.error {
+  color: #f44336; /* Vermelho para erro */
+}
+
+/* Estilo responsivo para telas pequenas */
+@media screen and (max-width: 600px) {
+  /* Ajustando o estilo para telas pequenas */
+  .material {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .bin {
+    font-size: 1rem;
+    width: 90px;
+    height: 90px;
+  }
+
+  .activity {
+    padding: 20px;
+  }
+
+  .materials {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bins {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

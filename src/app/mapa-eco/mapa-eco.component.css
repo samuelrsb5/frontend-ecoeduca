@@ -1,4 +1,5 @@
 .mapa {
+  
     text-align: center;
     padding: 20px;
   
@@ -24,5 +25,15 @@
         background-color: #007a5c;
       }
     }
+  }
+
+  google-map {
+    height: 100%; /* Ajuste conforme necessário */
+    width: 100%;  /* Ajuste conforme necessário */
+  }
+  
+  :host {
+    display: block;
+    height: 500px; /* Ajuste conforme necessário */
   }
   
