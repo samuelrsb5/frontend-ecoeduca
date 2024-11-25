@@ -1,115 +1,228 @@
+  /* Garante que o fundo azul seja aplicado à página inteira */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #87cefa; /* Azul claro */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Container principal */
 .reciclagem {
-    text-align: center;
-    padding: 20px;
-  
-    h1 {
-      color: #00a37d;
-    }
-  
-    p {
-      font-size: 18px;
-      margin: 10px 0;
-    }
-  
-    button {
-      padding: 10px 20px;
-      background-color: #00a37d;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: #007a5c;
-      }
-    }
+  text-align: center;
+  padding: 20px;
+}
+
+/* Instruções */
+/* Container das instruções */
+.instruction {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 20px 0;
+  background-color: #228be6;
+
+}
+
+/* Caixas de instrução */
+.instruction-box {
+  display: inline-block;
+  width: 150px;
+  padding: 10px;
+  margin: 0 10px;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.3s ease;
+}
+
+.instruction-box:hover {
+  transform: scale(1.05); /* Efeito ao passar o mouse */
+}
+
+/* Estilização das cores das caixas */
+.instruction-box.blue {
+  background-color: #0d5492; /* Azul */
+  border: 3px solid #707070;
+}
+
+.instruction-box.green {
+  background-color: #40c057; /* Verde */
+  border: 3px solid #707070;
+}
+
+.instruction-box.yellow {
+  background-color: #fab005; /* Amarelo */
+  border: 3px solid #707070;
+}
+
+.instruction-box.red {
+  background-color: #fa5252; /* Vermelho */
+  border: 3px solid #707070;
+}
+
+/* Botão de voltar */
+button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #00a37d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007a5c;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .instruction-box {
+    width: 100px;
+    margin: 5px;
   }
 
-  .instruction {
-    text-align: center;
-    margin-bottom: 20px;
+  button {
+    width: 80%;
+    font-size: 0.9rem;
   }
-  
-  .quiz {
-    text-align: center;
-  }
-  
+}
+
+
+/* Quiz */
+.quiz {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #228be6;
+  height: 90vh;
+}
+
+.quiz h2 {
+  color: #00509e; /* Azul escuro */
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.material-image {
+  width: 100px;
+  height: auto;
+  margin: 10px auto;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Lixeiras */
+.bins {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.bin {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.bin:hover {
+  transform: scale(1.1); /* Aumenta a lixeira ao passar o mouse */
+}
+
+.bin p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffffff; /* Texto branco */
+}
+
+.bin-image {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #707070; /* Borda branca */
+  border-radius: 50%;
+  transition: border-color 0.3s;
+}
+
+.bin:hover .bin-image {
+  border-color: #ffdd57; /* Cor amarela ao passar o mouse */
+}
+
+/* Feedback */
+.feedback {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #4caf50; /* Verde para resposta correta */
+}
+
+.feedback.error {
+  color: #f44336; /* Vermelho para resposta incorreta */
+}
+
+/* Botão Próxima Atividade */
+.next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #388e3c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .bins {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
-  
-  .bin {
-    text-align: center;
-  }
-  
+
   .bin-image {
-    width: 100px;
-    height: 100px;
-    border: 2px dashed #ccc;
+    width: 80px;
+    height: 80px;
   }
-  
-  .dashed {
-    border-style: dashed;
+
+  .instruction,
+  .quiz {
+    padding: 0 20px;
   }
-  
-  .feedback {
-    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .bin-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .bins {
+    gap: 10px;
+  }
+
+  .quiz h2 {
+    font-size: 1.2rem;
+    color: white;
     font-weight: bold;
   }
-  
-  @media (max-width: 768px) {
-    .bins {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-  
-    .bin-image {
-      width: 80px;
-      height: 80px;
-    }
-  
-    .instruction, .quiz {
-      padding: 0 20px;
-    }
+
+  .instruction h2 {
+    font-size: 1.4rem;
   }
 
-  .next-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  .instruction p {
+    font-size: 0.9rem;
   }
-  
-  .next-button:hover {
-    background-color: #45a049;
-  }
-  
-  
-  
-  @media (max-width: 480px) {
-    .bin-image {
-      width: 70px;
-      height: 70px;
-    }
-  
-    .bins {
-      gap: 10px;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
-  }
-  
+}
